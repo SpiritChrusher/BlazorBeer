@@ -16,11 +16,11 @@ else
         {
             <div class="card m-3" style="min-width: 18rem; max-width:40%;">
                 <div class="card-header">
-                    <h3>Name: @beer.Name</h3>
-                    <h3>SSN: @beer.Quality.ToString()</h3>
+                    <h3>Name: @beer.name</h3>
+                    <h3>SSN: @beer.quality.ToString()</h3>
                 </div>
             </div>
         }
     </div>
-    <button class="btn btn-danger m-1" @onclick=DeleteAllPatients>DeleteAll</button>
+    <button class="btn btn-danger m-1" @onclick=DeleteAllBeers>DeleteAll</button>
 }

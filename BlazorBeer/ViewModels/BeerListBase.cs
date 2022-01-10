@@ -8,14 +8,15 @@ public class BeerListBase : ComponentBase
 {
     public IEnumerable<Beer> Beers { get; set; }
 
-    private IBeerServices _beerServices;
+    [Inject]
+    public IBeerServices BeerServices { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        Beers = await _beerServices.GetAllBeersAsync();
+        Beers = await BeerServices.GetAllBeersAsync();
     }
 
-    protected void DeleteAllPatients()
+    protected static void DeleteAllBeers()
     {
         Console.WriteLine("beer");
     }
