@@ -1,3 +1,4 @@
+using System.Net.Http.Json;
 using BlazorBeer.Models;
 using BlazorBeer.Services;
 using Microsoft.AspNetCore.Components;
@@ -10,10 +11,14 @@ public class BeerListBase : ComponentBase
 
     [Inject]
     public IBeerServices BeerServices { get; set; }
+    
+    [Inject]
+    public HttpClient Client { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        Beers = await BeerServices.GetAllBeersAsync();
+        Beers = await Client.GetFromJsonAsync<IEnumerable<Beer>>("/beers");
+       // Beers = await BeerServices.GetAllBeersAsync();
     }
 
     protected static void DeleteAllBeers()
