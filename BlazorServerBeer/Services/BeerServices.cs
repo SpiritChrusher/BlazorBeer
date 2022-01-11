@@ -1,7 +1,7 @@
 using System.Net.Http.Json;
-using BlazorBeer.Models;
+using BlazorServerBeer.Models;
 
-namespace BlazorBeer.Services;
+namespace BlazorServerBeer.Services;
 
 public class BeerServices : IBeerServices
 {

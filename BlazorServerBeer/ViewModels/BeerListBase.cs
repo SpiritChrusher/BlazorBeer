@@ -1,9 +1,9 @@
 using System.Net.Http.Json;
-using BlazorBeer.Models;
-using BlazorBeer.Services;
+using BlazorServerBeer.Models;
+using BlazorServerBeer.Services;
 using Microsoft.AspNetCore.Components;
 
-namespace BlazorBeer.ViewModels;
+namespace BlazorServerBeer.ViewModels;
 
 public class BeerListBase : ComponentBase
 {

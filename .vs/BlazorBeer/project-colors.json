@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d6cb28df-bd86-40e6-98f9-080a872d6752": {
+      "ProjectGuid": "d6cb28df-bd86-40e6-98f9-080a872d6752",
+      "DisplayName": "BlazorBeer",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
