@@ -12,8 +12,9 @@ public class BeerServices : IBeerServices
         _client = client;
     }
     
-    public async Task<IEnumerable<Beer>> GetAllBeersAsync()
-    {
-        return await _client.GetFromJsonAsync<IEnumerable<Beer>>("/beers");
-    }
+    public async Task<IEnumerable<Beer>> GetAllBeersAsync() => 
+        await _client.GetFromJsonAsync<IEnumerable<Beer>>("/beers");
+
+    public async Task PostBeersAsync(AddBeer addBeer) => 
+        await _client.PostAsJsonAsync($"/beers", addBeer);
 }
